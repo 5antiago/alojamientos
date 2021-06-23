@@ -1,0 +1,171 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    background: no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+.left{
+    align-items: flex-start;
+    padding-left: 4%;
+}
+.right{
+    align-items: flex-end;
+    padding-right: 4%;
+    text-align: right;
+}
+.center{
+    align-items: center;
+    text-align: center;
+}
+.fixed{
+    background-attachment: fixed;
+}
+.bg-1{
+    background-image: linear-gradient(270deg, rgba(65, 64, 64, 0.171) 40%, rgba(44, 44, 44, 0.808) 65%), 
+    url("bg-1.jpg");
+    height: 110vh;
+}
+.bg-2{
+    background-image: linear-gradient(90deg, rgba(65, 64, 64, 0.171) 40%, rgba(44, 44, 44, 0.808) 65%), 
+    url("bg-2.jpg");
+    height: 110vh;
+}
+.bg-cab{
+    background-image: linear-gradient(180deg, rgba(44, 44, 44, 0.75) 0%, rgba(44, 44, 44, 0.75) 100%), 
+    url("bg-cab.webp");
+}
+.bg-act{
+    background-image: linear-gradient(180deg, rgba(44, 44, 44, 0.75) 0%, rgba(44, 44, 44, 0.75) 100%), 
+    url("bg-act.jpg");
+}
+h1{
+    font-family: inherit;
+    color: rgb(212, 212, 212);
+    height: auto;
+    width: auto;
+    font-size: 60px;
+    margin-top: 13%;
+}
+.scn-text{
+    color: rgb(212,212,212);
+    font-size: 30px;
+    width: 35%;
+    margin-bottom: 5%;
+}
+.btn-consulta{
+    border-radius: 8px;
+    text-decoration: none;
+    width: auto;
+    padding: 18px;
+    background-color: rgba(245, 152, 46, 0.829);
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .5s;
+    margin-top: 15px;
+}
+.btn-consulta:hover{
+    background-color: rgb(167, 104, 31);
+}
+table{
+    width: 50%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 2px solid rgba(245, 152, 46, 0.829);
+    text-align: center;
+    color: rgb(212, 212, 212);
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+thead{
+    border: 2px solid rgba(245, 152, 46, 0.829);
+}
+th, td{
+    padding: 20px;
+}
+form{
+    display: inline;
+    width: 50%;
+}
+.inp-consulta{
+    width: 30%;
+    height: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(212, 212, 212);
+    border: none;
+    outline: none;
+    border-bottom: rgba(245, 152, 46, 0.829) solid 1px;
+    transition: 0.4s ease  ;
+}
+.inp-consulta:focus{
+    border-bottom: rgba(245, 152, 46, 0.829) solid 2px;
+    width: 35%;
+    height: 35px;
+
+}
+.inp-consulta::placeholder{
+    color: rgba(212, 212, 212, 0.63);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+select{
+    cursor: pointer;
+}
+option{
+    color: rgb(56, 56, 56);
+    background-color: rgba(0, 0, 0, 0.048);
+}
+@media only screen and (max-width: 700px) {
+    h1{
+        height: auto;
+        width: auto;
+        font-size: 45px;
+        margin-top: 13%;
+    }
+    .scn-text{
+        color: rgb(212,212,212);
+        font-size: 25px;
+        width: 35%;
+        margin-bottom: 5%;
+    }
+    table{
+        width: 90%;
+        font-size: 14px;
+        text-align: left;
+
+    }
+    form{
+        width: 80%;
+    }
+    th, td{
+        padding: 10px;
+    }
+    .btn-consulta{
+        font-size: 14px;
+        padding: 13px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/main.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="intro bg-act center">
+            <h1>Elija un Día</h1>
+            <form action="/Dias" method="POST" id="cons">
+                <select name="dia" id="dia" class="inp-consulta" form="cons">
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Miércoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sábado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                </select>
+                <input class="btn-consulta" type="submit" value="Consultar">
+            </form>
+            <table>
+            <thead>
+                <tr>
+                    <th>Alojamiento</th>
+                    <th>Actividad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for a in listado%}
+                    <tr>
+                        {%for i in a%}
+                            <td>{{i}}</td>
+                        {%endfor%}
+                    </tr>
+                {%endfor%}
+            </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
